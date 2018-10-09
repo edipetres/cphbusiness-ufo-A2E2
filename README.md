@@ -1,7 +1,7 @@
 # Load time analysis of libraries used in our project
 Cphbusiness - UFO course - Assignment 2 - Exercise 2
 
-I ran a load time performance analysis on a web project I built for my work. Note that since it is a private repository I could not include the link here, but I'm happy to show the source code if needed. The analysis was done on the production version of the website available at [agents.valuer.ai](agents.valuer.ai) - only supports mobile devices.
+I ran a load time performance analysis on a web project I built for my work. Note that since it is a private repository I could not include the link here, but I'm happy to show the source code if needed. The analysis was done on the production version of the website available at [agents.valuer.ai](http://agents.valuer.ai) - only supports mobile devices. In the production version the code is bundled, minified and optimized for fast loading performance.
 
 ## Problem 
 
@@ -29,8 +29,8 @@ None of these libraries slow down the loading performance considerably on PC wit
 
 ## Solution
 
-Considering the loading times on mobile devices which are the primary targets of the web application, we should consider improving the performance in order to engage the users earlier and not waste precious seconds.
+Looking at the loading times on mobile devices which are the primary targets of the web application, we should consider improving the performance in order to engage the users earlier and not waste precious seconds.
 
 Google has a few tips and recommends server side rendering, inlining the JavaScript code to avoid extra roundtrips, loading certain libraries after the content is rendered. In case of CSS libraries we could remove libraries which are not used, or reduce the modules loaded to the absolutely neccessary ones. Let's say we only use the button styles of a certain library, in which case - if possible - we should not load all of the other modules styling tabs, inputs etc.
 
-Another solution can be to use fast CDNs (Content Delivery Network) whose servers are located close to our target users. We could also include vendor files in our own project and serve it from our servers if those are more optimized to serving files fast and near the user.
+Another solution can be to use fast CDNs (Content Delivery Network) whose servers are located close to our target users. We could also include the vendor files in our own project and serve them from our servers if those are more optimized to delivering files fast and close to the user.
